@@ -24,10 +24,10 @@ func GetFloats(fileName string) ([]float64, error) {
 	}
 	err = file.Close()
 	if err != nil {
-		return numbers, err
+		return nil, err
 	}
 	if scanner.Err() != nil {
-		return numbers, scanner.Err()
+		return nil, scanner.Err()
 	}
 	return numbers, nil
 }
